@@ -12,70 +12,6 @@ st.set_page_config(
     layout="wide"
 )
 
-# Title
-st.title("🤖 AI Clone Chatbot")
-st.markdown("### Your Personal AI Assistant with RAG Technology")
-
-# Sidebar
-with st.sidebar:
-    st.header("Configuration")
-    
-    # API Key input
-    groq_api_key = st.text_input(
-        "Enter your Groq API Key:",
-        type="password",
-        help="Get your free API key from https://console.groq.com/"
-    )
-    
-    if groq_api_key:
-        os.environ["GROQ_API_KEY"] = groq_api_key
-        st.success("✅ API Key configured!")
-    else:
-        st.warning("⚠️ Please enter your Groq API Key to continue")
-
-# Main chat interface
-if groq_api_key:
-    # Initialize chat history
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
-
-    # Display chat messages
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
-
-    # Chat input
-    if prompt := st.chat_input("Ask me anything..."):
-        # Add user message to chat history
-        st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user"):
-            st.markdown(prompt)
-
-        # Generate response
-        with st.chat_message("assistant"):
-            with st.spinner("Thinking..."):
-                try:
-                    # Try to import and use the real chatbot
-                    import sys
-                    sys.path.append('.')
-                    sys.path.append('./src')
-                    
-                    from src.chatbot import get_chatbot_response
-                    response = get_chatbot_response(prompt)
-                    
-                except ImportError as e:
-                    # Handle import errors on deployment
-                    st.error(f"Import error: {str(e)}")
-                    response = handle_deployment_fallback(prompt)
-                    
-                except Exception as e:
-                    # Handle other errors
-                    st.error(f"Processing error: {str(e)}")
-                    response = handle_deployment_fallback(prompt)
-            
-            st.markdown(response)
-            st.session_state.messages.append({"role": "assistant", "content": response})
-
 def handle_deployment_fallback(prompt: str) -> str:
     """Handle responses when deployment has issues"""
     prompt_lower = prompt.lower()
@@ -211,6 +147,64 @@ I'm a professional RAG-powered chatbot with:
 **For enhanced responses:** Add your Groq API key in the sidebar!
 
 What would you like to explore? 🚀"""
+
+# Title
+st.title("🤖 AI Clone Chatbot")
+st.markdown("### Your Personal AI Assistant with RAG Technology")
+
+# Sidebar
+with st.sidebar:
+    st.header("Configuration")
+    
+    # API Key input
+    groq_api_key = st.text_input(
+        "Enter your Groq API Key:",
+        type="password",
+        help="Get your free API key from https://console.groq.com/"
+    )
+    
+    if groq_api_key:
+        os.environ["GROQ_API_KEY"] = groq_api_key
+        st.success("✅ API Key configured!")
+    else:
+        st.warning("⚠️ Please enter your Groq API Key to continue")
+
+# Main chat interface
+if groq_api_key:
+    # Initialize chat history
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+
+    # Display chat messages
+    for message in st.session_state.messages:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
+
+    # Chat input
+    if prompt := st.chat_input("Ask me anything..."):
+        # Add user message to chat history
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        with st.chat_message("user"):
+            st.markdown(prompt)
+
+        # Generate response
+        with st.chat_message("assistant"):
+            with st.spinner("Thinking..."):
+                try:
+                    # Try to import and use the real chatbot
+                    import sys
+                    sys.path.append('.')
+                    sys.path.append('./src')
+                    
+                    from src.chatbot import get_chatbot_response
+                    response = get_chatbot_response(prompt)
+                    
+                except Exception as e:
+                    # Handle any errors with smart fallback
+                    response = handle_deployment_fallback(prompt)
+            
+            st.markdown(response)
+            st.session_state.messages.append({"role": "assistant", "content": response})
 
     # Features section
     st.markdown("---")
