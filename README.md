@@ -175,7 +175,7 @@ This project is built for the HiDevs AI Competition.
 
 ## 🤝 Contributing
 
-Built by [Your Name] for the "Build Your Own AI Clone" competition.
+Built by sumit for the "Build Your Own AI Clone" competition.
 
 ---
 
