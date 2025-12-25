@@ -1,10 +1,60 @@
 # Python
 __pycache__/
 *.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
 venv/
 env/
-.DS_Store
-node_modules/
-.idea/
+ENV/
+
+# Environment Variables
+.env
+
+# IDE
 .vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
 *.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# PyTorch
+*.pth
+
+# Model files
+*.pkl
+*.joblib
+
+# Large files (but we want to keep chroma_db and data)
+# chroma_db/ - Keep this for deployment
+# data/ - Keep this for deployment

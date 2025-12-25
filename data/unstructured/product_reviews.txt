@@ -1,0 +1,67 @@
+PRODUCT REVIEWS DATABASE
+=======================
+
+Product ID: PROD-1001
+Name: Wireless Bluetooth Headphones
+Category: Electronics > Audio
+
+Review #1:
+Customer: Alice Cooper
+Rating: 5/5
+Date: 2024-01-10
+Title: Excellent sound quality!
+Review: These headphones provide incredible sound clarity and deep bass. The noise cancellation works perfectly for my daily commute. Battery life exceeds expectations - easily 8+ hours of continuous use. Highly recommended!
+
+Review #2:
+Customer: Bob Wilson
+Rating: 4/5
+Date: 2024-01-12
+Title: Good but could be better
+Review: Solid build quality and comfortable fit. Sound is good but not exceptional. The touch controls are responsive. Only complaint is the charging case could be smaller. Overall satisfied with purchase.
+
+Review #3:
+Customer: Carol Martinez
+Rating: 3/5
+Date: 2024-01-14
+Title: Average performance
+Review: Decent headphones for the price. Connection is stable but sound quality is just okay. Battery drains faster than advertised. Not bad but there are better options available.
+
+---
+
+Product ID: PROD-1002
+Name: Smart Fitness Tracker
+Category: Electronics > Wearables
+
+Review #1:
+Customer: David Lee
+Rating: 5/5
+Date: 2024-01-08
+Title: Perfect fitness companion
+Review: Accurate heart rate monitoring and step counting. The sleep tracking feature is detailed and helpful. Water resistant and comfortable to wear all day. App integration is seamless with my phone.
+
+Review #2:
+Customer: Emma Taylor
+Rating: 4/5
+Date: 2024-01-11
+Title: Great features, minor issues
+Review: Tracks all major metrics well. GPS is accurate for outdoor activities. The only downside is the screen brightness could be higher. Otherwise, excellent value for money.
+
+---
+
+Product ID: PROD-1003
+Name: Ergonomic Office Chair
+Category: Furniture > Office
+
+Review #1:
+Customer: Frank Garcia
+Rating: 5/5
+Date: 2024-01-05
+Title: Game changer for my back
+Review: This chair has transformed my workday comfort. Excellent lumbar support and adjustable height. The mesh material breathes well during long sessions. Worth every penny for preventing back pain.
+
+Review #2:
+Customer: Grace Kim
+Rating: 4/5
+Date: 2024-01-09
+Title: Comfortable but pricey
+Review: Very comfortable chair with good adjustability. Build quality is solid. Only reason for 4 stars is the high price point. If budget allows, definitely recommend.

@@ -1,1 +1,14 @@
-# Add your project dependencies here
+langchain
+langchain-community
+langchain-groq
+chromadb
+sentence-transformers
+streamlit
+pymongo
+arize
+unstructured[local-inference]
+pypdf
+python-dotenv
+faiss-cpu
+plotly
+pandas
